@@ -1,0 +1,26 @@
+﻿git checkout 的用法:Git权威指南131页
+1>: git checkout [-q] [<commit>] [--] <files>...
+2>: git checkout [branch]
+3>: git checkout [-m] [[-b|--orphan] <new_branch>] [<commit>]
+
+git checkout 汇总显示工作区.暂存区.HEAD的差异
+
+
+git checkout 
+git checkout <commit-Id>     进入分离头指针模式,HEAD指向commit-ID
+git checkout HEAD@'{<date>}' 切换到指定日期
+git checkout master          切换到master分支
+git checkout <tag>           切换至里程碑
+git checkout <branch>        切换至分支
+git checkout --<path>        还原文件/强制覆盖
+
+
+git checkout branchname，会改变HEAD头指针，主要用于切换分支
+
+git checkout -b branchname，用于创建一个新的分支，并且切换到创建的新的分支上
+
+git checkout --filename，用暂存区中的filename文件来覆盖工作区中的filename文件
+
+git checkout <commit> --filename，用指定提交中的文件覆盖暂存区和工作区中对应的文件
+
+git checkout -- .或者git checkout .，用暂存区的所有文件直接覆盖本地文件，取消所有的本地的修改，是一条危险的操作

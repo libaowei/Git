@@ -1,0 +1,62 @@
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+[core]
+	autocrlf = False
+	quotepath = false
+	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
+[user]
+	name = free.li
+	email = free.li@**.cn
+[push]
+	default = simple
+[color]
+	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = true
+[diff]
+	tool = p4merge
+	guitool = kdiff3
+[difftool "p4merge"]
+	cmd = p4merge.exe$LOCAL$REMOTE
+[gui]
+	encoding = utf-8
+	warndetachedcommit = true
+[alias]
+	st = status -sb
+	sb = branch -vv
+	us = branch -u
+	lol = log --pretty=raw --decorate --graph
+	lll = log --oneline --decorate --graph
+	hist = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an%Cgreen::%Cblue%ae>%Creset' --abbrev-commit --date=relative
+	br = branch
+	co = checkout
+	ci = commit
+	mo = merge @{u}
+	ro = rebase @{u}
+	refs = rev-parse --symbolic --glob=refs/*
+	reft = rev-parse --symbolic --tags
+	refb = rev-parse --symbolic --branches
+	refh = rev-parse HEAD
+	ds = describe
+	rl = reflog
+	rl = rev-list
+	cf = cat-file
+	type = cat-file -p
+	dump = cat-file -t
+	lf = ls-files
+	lt = ls-tree
+	di = diff
+	dw = diff --word-diff
+	bl = blame
+	bis = bisect
+	rp = rev-parse
+[i18n]
+	commitEncoding = utf-8
+[credential]
+	helper = store
+[difftool "kdiff3"]
+	path = C:/Program Files/KDiff3/kdiff3.exe

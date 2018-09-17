@@ -1,0 +1,19 @@
+git branch，显示当前所在的分支
+
+git branch <branchname>，创建新的分支branchname
+
+git branch <branchname> <start-point>，基于提交<start-point>创建新分支，新分支的分支名为<branchname>
+
+git branch -d <branchname> ，删除名称为branchname的分支，删除时会检查所有的删除分支是否已经合并到其他分支，否则拒绝删除
+
+git branch -D <branchname>，强制删除分支<branchname>
+
+git branch -m <oldbranch> <newbranch>，重命名分支
+
+
+你可以在使用'git branch'命令时加上'--track'参数, 来手动创建一个'追踪分支'.
+git branch --track experimental origin/experimental
+当你运行下命令时:
+$ git pull experimental
+它会自动从‘origin'抓取(fetch)内容，再把远程的'origin/experimental'分支合并进(merge)本地的'experimental'分支.
+当要把修改推送(push)到origin时, 它会将你本地的'experimental'分支中的修改推送到origin的‘experimental'分支里,　而无需指定它(origin).

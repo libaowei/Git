@@ -1,0 +1,50 @@
+[user]
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+[core]
+	autocrlf = false
+	quotepath = false
+[alias]
+	
+[user]
+	name = free.li
+	email = free.li@**.cn
+[push]
+	default = simple
+[color]
+	ui = true
+[merge]
+	summary = true
+[gui]
+	encoding = utf-8
+	warndetachedcommit = true
+[alias]
+	st = status -sb
+	lol = log --pretty=raw --decorate --graph
+	lll = log --oneline --decorate --graph
+	br = branch
+	co = checkout
+	ci = commit
+	refs = rev-parse --symbolic --glob=refs/*
+	reft = rev-parse --symbolic --tags
+	refb = rev-parse --symbolic --branches
+	refh = rev-parse HEAD
+	ds = describe
+	rl = reflog
+	rl = rev-list
+	cf = cat-file
+	cfp = cat-file -p
+	cft = cat-file -t
+	lf = ls-files
+	lt = ls-tree
+	di = diff
+	dw = diff --word-diff
+	bl = blame
+	bis = bisect
+	rp = rev-parse
+[i18n]
+	commitEncoding = utf-8
+[credential]
+	helper = store
